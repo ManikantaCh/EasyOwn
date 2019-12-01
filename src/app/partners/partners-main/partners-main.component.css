@@ -1,0 +1,72 @@
+mat-card{
+    width: 70%;
+    height: 70%;
+}
+
+.mat-list-base .mat-list-item, .mat-list-base .mat-list-option{
+    height: 30px;
+}
+
+.nav .mat-list-base{
+    padding-top: 10px;
+    padding-left: 1px;
+}
+
+.mat-list-base{
+    padding-top: 0px;
+}
+
+.mat-card:not([class*=mat-elevation-z]){
+    box-shadow: none;
+  }
+
+  .mat-input-element-custom{
+    width: 72%;
+}
+
+.tab-align{
+    height: 8%;
+    width: 78%;
+    overflow-x: hidden !important;
+    margin-top: 12%;
+}
+
+.tab-active{
+    color: red;
+    border-left: red;
+}
+
+::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}
+::ng-deep .mat-form-field-label-wrapper { top: -1.5em; }
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    transform: translateY(-1.1em) scale(.75);
+    width: 133.33333%;
+}
+
+.mat-chip.mat-standard-chip{
+    background-color: #989898 !important;
+  }
+  
+  :host /deep/ .mat-list-item-content {
+    padding: 0!important;
+  }
+  
+  .mat-input-outline ::ng-deep .mat-form-field-hide-placeholder .mat-form-field-label-wrapper {
+    text-align: center;
+    top: -25px;
+  }
+  
+  .mat-input-outline ::ng-deep .mat-form-field-infix {
+    padding: 1px 1px 5px 1px !important;
+    height: 20px;
+  }
+  
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: white;
+    border-radius: 0%;
+  }
+  
+  .mat-option{
+    height: 35px !important;
+  }

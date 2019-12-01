@@ -1,0 +1,117 @@
+<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+    <div fxFlex="70%">
+        <mat-form-field class="mat-input-element-custom customGridColumn m-t-10">
+            <input matInput type="text" placeholder="Search Product...">
+            <button mat-button matPrefix mat-icon-button>
+                <mat-icon>search</mat-icon>
+            </button>
+        </mat-form-field>
+        <button mat-raised-button color="primary" class="mat-button-custom btn-custom-bg m-l-50 m-t-10" (click)="createNewProduct()">Create
+            New Product</button>
+        <p>Filtered result by:</p>
+        <mat-chip-list #chipList aria-label="Fruit selection">
+            <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="true"
+                (removed)="removeFilters(fruit)">
+                {{fruit.name}}
+                <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+        </mat-chip-list>
+        <div fxLayout="row wrap" fxLayout.md="row wrap" fxLayout.xs="column wrap" class="m-t-25" fxLayoutGap="2% grid">
+            <div fxFlex.gt-xs="50%" fxFlex.gt-md="50%" *ngFor="let fruit of result; let i = index" fxLayoutGap="10px">
+                <mat-card class="width-85">
+                    <div fxLayout="row wrap" fxLayout.md="row wrap">
+                        <div fxFlex.gt-xs="40%">
+                            <img src="../assets/81bjpVu5s5L._SL1500_.jpg" width="70px" height="100px">
+                        </div>
+                        <div fxFlex.gt-xs="60%">
+                            <mat-list class="search-result">
+                                <mat-list-item>Samsung M30</mat-list-item>
+                                <mat-list-item>
+                                    <p><small style="text-decoration: line-through;">&#x20b9;
+                                            30,000/-
+                                        </small></p>
+                                </mat-list-item>
+                                <mat-list-item><strong>&#x20b9; 24,000/-</strong>
+                                </mat-list-item>
+                            </mat-list>
+                        </div>
+                    </div>
+
+                </mat-card>
+            </div>
+        </div>
+    </div>
+    <div fxFlex="30%">
+        <mat-card class="width-100 custom-bg-color">
+            <p>Filter by</p>
+            <mat-card-content class="filter-card">
+                <div>
+                    <mat-card class="whiteBackGround">
+                        <form [formGroup]="filtersForm">
+                            <p>Shared with (Partners)</p>
+                            <mat-form-field class="mat-input-outline width-100 mat-input-custombg" appearance="outline">
+                                <input type="text" placeholder="Type and select" aria-label="Select Users" matInput>
+                            </mat-form-field>
+
+                            <div class="multi-select-filters">
+                                <mat-option *ngFor="let partner of partners; let i = index" formArrayName="partners">
+                                    <div>
+                                        <mat-checkbox [formControlName]="i">{{ partner.name }}</mat-checkbox>
+                                    </div>
+                                </mat-option>
+                            </div>
+
+                            <p>Date Added</p>
+                            <mat-grid-list cols="2" rowHeight="5rem" class="m-t-n-15">
+                                <mat-grid-tile colspan="1">
+                                    <mat-form-field class="mat-input-outline width-85 mat-input-custombg" appearance="outline">
+                                        <mat-label>From</mat-label>
+                                        <input type="text" name="dDateAddedFrom" matInput
+                                            formControlName="dateAddedFrom">
+                                    </mat-form-field>
+                                    <p class="m-l-10 m-t-n-10">-</p>
+                                </mat-grid-tile>
+                                <mat-grid-tile colspan="1">
+                                    <mat-form-field class="mat-input-outline width-85 mat-input-custombg" appearance="outline">
+                                        <mat-label>To</mat-label>
+                                        <input type="text" name="dDateAddedTo" matInput formControlName="dateAddedTo">
+                                    </mat-form-field>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+
+                            <p>Categories</p>
+                            <mat-form-field class="mat-input-outline width-100 mat-input-custombg" appearance="outline">
+                                <input type="text" placeholder="Type and select" aria-label="Select Users" matInput>
+                            </mat-form-field>
+                            <div class="multi-select-filters">
+                                <mat-option *ngFor="let category of categories; let i = index"
+                                    formArrayName="categories">
+                                    <div>
+                                        <mat-checkbox [formControlName]="i">{{ category.name }}</mat-checkbox>
+                                    </div>
+                                </mat-option>
+                            </div>
+
+                            <p>Sales - (in months)</p>
+                            <mat-grid-list cols="2" rowHeight="5rem" class="m-t-n-15">
+                                <mat-grid-tile colspan="1">
+                                    <mat-form-field class="mat-input-outline width-85 mat-input-custombg" appearance="outline">
+                                        <mat-label>Min</mat-label>
+                                        <input type="text" name="txtSalesMin" matInput formControlName="salesMin">
+                                    </mat-form-field>
+                                    <p class="m-l-10 m-t-n-10">-</p>
+                                </mat-grid-tile>
+                                <mat-grid-tile colspan="1">
+                                    <mat-form-field class="mat-input-outline width-85 mat-input-custombg" appearance="outline">
+                                        <mat-label>Max</mat-label>
+                                        <input type="text" name="txtSalesMax" matInput formControlName="salesMax">
+                                    </mat-form-field>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                        </form>
+                    </mat-card>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

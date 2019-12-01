@@ -1,0 +1,180 @@
+<!-- <div class="grid-container">
+  <mat-grid-list cols="2" rowHeight="350px">
+
+    <mat-grid-tile [colspan]="isSmallScreen ? 2 : 1" [rowspan]="1">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Order History
+            <button mat-icon-button class="more-button right-corner-link">
+              <a>View all</a>
+              <i class="material-icons">
+                arrow_right_alt
+              </i>
+            </button>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content class="dashboard-card-content">
+          <div>
+
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="isSmallScreen ? 2 : 1" [rowspan]="1">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Sales Report
+            <button mat-icon-button class="more-button right-corner-link">
+              <a>View all</a>
+              <i class="material-icons">
+                arrow_right_alt
+              </i>
+            </button>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content class="dashboard-card-content">
+          <div>
+
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="isSmallScreen ? 2 : 1" [rowspan]="1">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Partners Profile
+            <button mat-icon-button class="more-button right-corner-link">
+              <a>View all</a>
+              <i class="material-icons">
+                arrow_right_alt
+              </i>
+            </button>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content class="dashboard-card-content">
+          <div>
+
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="isSmallScreen ? 2 : 1" [rowspan]="1">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Inveestories Stock
+            <button mat-icon-button class="more-button right-corner-link">
+              <a>View all</a>
+              <i class="material-icons">
+                arrow_right_alt
+              </i>
+            </button>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content class="dashboard-card-content">
+          <div>
+
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div> -->
+<div class="grid-container">
+<mat-grid-list cols="2" style="padding:10px" rowHeight="7rem">
+  <mat-grid-tile colspan="{{isSmallScreen ? 2 : 1}}" rowspan="4">
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-card-title>
+          Order History
+          <button mat-icon-button class="more-button right-corner-link">
+            <a>View all</a>
+            <i class="material-icons">
+              arrow_right_alt
+            </i>
+          </button>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content class="dashboard-card-content">
+        <div>
+          
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="{{isSmallScreen ? 2 : 1}}" rowspan="5">
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-card-title>
+          Sales Report
+          <button mat-icon-button class="more-button right-corner-link">
+            <a>View all</a>
+            <i class="material-icons">
+              arrow_right_alt
+            </i>
+          </button>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content class="dashboard-card-content">
+        <div>
+          <app-data-grid [gridData]="ELEMENT_DATA" [gridColumnsOptions]="columns"></app-data-grid>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="{{isSmallScreen ? 2 : 1}}" rowspan="4">
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-card-title>
+          Partners Profile
+          <button mat-icon-button class="more-button right-corner-link">
+            <a>View all</a>
+            <i class="material-icons">
+              arrow_right_alt
+            </i>
+          </button>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content class="dashboard-card-content">
+        <div>
+
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="{{isSmallScreen ? 2 : 1}}" rowspan="3">
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-card-title>
+          Inveestories Stock
+          <button mat-icon-button class="more-button right-corner-link">
+            <a>View all</a>
+            <i class="material-icons">
+              arrow_right_alt
+            </i>
+          </button>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content class="dashboard-card-content">
+        <div>
+
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+</div>

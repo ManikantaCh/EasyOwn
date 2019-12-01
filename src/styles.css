@@ -1,0 +1,236 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body{
+    margin: 0%;
+}
+
+/* a.active{
+    border-top-color: #5514b4 !important;
+    color: #5514b4 !important;
+    border-top: solid 1px #414042;
+} */
+
+.btn-custom-bg{
+    background-color: #20B2AA !important;
+  }
+
+.m-t-5{
+    margin-top: 5px !important;
+}
+
+.m-t-10{
+    margin-top: 10px !important;
+}
+
+.m-t-15{
+    margin-top: 15px !important;
+}
+
+.m-t-25{
+    margin-top: 25px !important;
+}
+
+.m-t-30{
+    margin-top: 30px !important;
+}
+
+.m-t-50{
+    margin-top: 50px !important;
+}
+
+.m-t-n-15{
+    margin-top: -15px !important;
+}
+
+.m-t-n-10{
+    margin-top: -10px !important;
+}
+
+.m-l-5{
+    margin-left: 5px !important;
+}
+
+.m-l-10{
+    margin-left: 10px !important;
+}
+
+.m-l-p-10{
+    margin-left: 10% !important;
+}
+
+.m-l-n-10{
+    margin-left: -10px !important;
+}
+
+.m-l-n-15{
+    margin-left: -15px !important;
+}
+
+.m-l-25{
+    margin-left: 25px !important;
+}
+
+.m-l-30{
+    margin-left: 30px !important;
+}
+
+.m-l-50{
+    margin-left: 50px !important;
+}
+
+.p-0{
+    padding: 0px !important;
+}
+
+.width-100{
+    width: 100% !important;
+}
+
+.width-95{
+    width: 95% !important;
+}
+
+.width-90{
+    width: 90% !important;
+}
+
+.width-85{
+    width: 85% !important;
+}
+
+.width-80{
+    width: 80% !important;
+}
+
+.width-75{
+    width: 75% !important;
+}
+
+.width-50{
+    width: 50% !important;
+}
+
+.width-40{
+    width: 40% !important;
+}
+
+.width-10{
+    width: 10% !important;
+}
+
+.custom-bg-color{
+    background-color: #DCDCDC !important;
+}
+
+.custom-lite-bg-color{
+    background-color: rgb(240, 240, 240) !important;
+}
+
+.mat-drawer-content{
+    overflow: hidden !important;
+}
+
+.mat-card:not([class*=mat-elevation-z]){
+    box-shadow: none;
+  }
+
+.navigation .mat-accent{
+    color: #33cccc !important;
+}
+
+.font-main-color{
+    color: #33cccc !important;
+}
+
+.right-corner-link{
+    right: 50px !important;
+    font-weight: normal;
+    color: #33cccc !important;
+    margin-top: 3px !important;
+}
+
+.grid-container {
+    /* margin: 20px; */
+  }
+
+  .dashboard-card {
+    position: absolute !important;
+    top: 15px !important;
+    left: 15px !important;
+    right: 15px !important;
+    bottom: 15px !important;
+  }
+
+  .dashboard-card-content {
+    text-align: center !important;
+  }
+
+  .header-less-tabs.mat-tab-group .mat-tab-header {
+    display: none !important;
+  }
+
+  .tab-align .mat-drawer-inner-container{
+    overflow: hidden !important;
+}
+
+.customGridColumn.mat-grid-tile .mat-figure{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+}
+
+.multi-select-filters{
+    background-color: #F5F5F5;
+    margin-top: -8%;
+    height: 150px;
+    overflow-y: scroll;
+}
+
+.mat-input-normalbg .mat-form-field-outline{
+    background-color:white !important;
+  }
+
+.mat-input-custombg .mat-form-field-outline{
+    background-color: #E0E0E0 !important;
+  }
+
+  .filter-card .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background{
+    background-color: #33cccc !important;
+  }
+
+  .filter-card .mat-checkbox-checked .mat-checkbox-label{
+    color: #33cccc !important;
+  }
+
+  .mat-tab-body-content{
+    overflow: hidden !important;
+}
+
+.center-pos{
+    text-align: center;
+}
+
+.highlight-tab-text{
+    background-color: red;
+    color: white;
+    padding: 3px;
+}
+
+.non-highlight-tab-text{
+    background-color: #606060;
+    color: white;
+    padding: 3px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-end, .mat-form-field-appearance-outline .mat-form-field-outline-start{
+    border: none !important;
+}

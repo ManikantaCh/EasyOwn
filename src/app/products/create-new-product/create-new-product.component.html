@@ -1,0 +1,143 @@
+<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap.xs="0">
+    <div fxFlex="15%" *ngIf="!isSmallScreen"
+        [ngClass]="{ 'custom-bg-color': index == 0, 'custom-lite-bg-color': index == 1}">
+        <mat-card [ngClass]="{ 'custom-bg-color': index == 0, 'custom-lite-bg-color': index == 1}">
+            <mat-sidenav mode="side" opened class="tab-align nav">
+                <mat-action-list>
+                    <button [ngClass]="{'tab-active': index == 0}" class="m-l-30" mat-list-item (click)="index = 0">
+                        <span>All Products</span> </button>
+                    <button [ngClass]="{'tab-active': index == 1}" class="m-l-30" mat-list-item (click)="index = 1">
+                        <span>Categories</span> </button>
+                </mat-action-list>
+            </mat-sidenav>
+        </mat-card>
+    </div>
+    <div fxFlex="15%" *ngIf="isSmallScreen">
+        <mat-card class="custom-bg-color">
+            <mat-tab-group (selectedTabChange)="tabChange($event)">
+                <mat-tab label="All Products" (click)="index = 0"></mat-tab>
+                <mat-tab label="Categories" (click)="index = 1"></mat-tab>
+            </mat-tab-group>
+        </mat-card>
+    </div>
+    <div fxFlex="45%">
+        <mat-card class="custom-bg-color" [ngClass]="{'p-0': index == 1}">
+            <h2>Create New Product</h2>
+            <form>
+                <div class="form-group">
+                    <label for="paysAdresse">Product Name </label>
+                    <mat-form-field class="mat-input-outline mat-input-normalbg" appearance="outline">
+                        <input matInput id="paysAdresse">
+                    </mat-form-field>
+                </div>
+                <div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="20px">
+                    <div fxFlex="50%" class="form-group">
+                        <label for="paysAdresse">Category</label>
+                        <mat-form-field class="mat-input-outline mat-input-normalbg" appearance="outline">
+                            <input matInput id="paysAdresse">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="50%" class="form-group">
+                        <label for="paysAdresse">Brand</label>
+                        <mat-form-field class="mat-input-outline mat-input-normalbg" appearance="outline">
+                            <input matInput id="paysAdresse">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap.xs="0" fxLayoutGap="20px">
+                    <div fxFlex="50%" class="form-group">
+                        <label for="paysAdresse">Model</label>
+                        <mat-form-field class="mat-input-outline mat-input-normalbg" appearance="outline">
+                            <input matInput id="paysAdresse">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="50%" class="form-group">
+                        <label for="paysAdresse">Capacity/Size</label>
+                        <mat-form-field class="mat-input-outline mat-input-normalbg" appearance="outline">
+                            <input matInput id="paysAdresse">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap.xs="0" fxLayoutGap="20px">
+                    <div fxFlex="50%" class="form-group">
+                        <label for="paysAdresse">Color</label>
+                        <mat-form-field class="mat-input-outline mat-input-normalbg" appearance="outline">
+                            <input matInput id="paysAdresse">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="50%" class="form-group">
+                        <label for="paysAdresse">Is it Cash & Carry</label>
+                        <mat-form-field class="mat-input-outline mat-input-normalbg" appearance="outline">
+                            <input matInput id="paysAdresse">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap.xs="0" fxLayoutGap="20px">
+                    <div fxFlex="50%" class="form-group">
+                        <label for="paysAdresse">MRP</label>
+                        <mat-form-field class="mat-input-outline mat-input-normalbg" appearance="outline">
+                            <input matInput id="paysAdresse">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="50%" class="form-group">
+                        <label for="paysAdresse">Warranty (in Months)</label>
+                        <mat-form-field class="mat-input-outline mat-input-normalbg" appearance="outline">
+                            <input matInput id="paysAdresse">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap.xs="0" fxLayoutGap="20px">
+                    <div fxFlex="50%" class="form-group">
+                        <label for="paysAdresse">HSN</label>
+                        <mat-form-field class="mat-input-outline mat-input-normalbg" appearance="outline">
+                            <input matInput id="paysAdresse">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="50%" class="form-group">
+                        <label for="paysAdresse">GST % (M)</label>
+                        <mat-form-field class="mat-input-outline mat-input-normalbg" appearance="outline">
+                            <input matInput id="paysAdresse">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="container" fxLayout fxLayout.xs="column" fxLayoutGap.xs="0">
+                    <div fxFlex="50%" class="form-group">
+                        <label for="paysAdresse">Contact Person</label>
+                        <mat-form-field class="mat-input-outline mat-input-normalbg" appearance="outline">
+                            <input matInput id="paysAdresse">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="paysAdresse">Description</label>
+                    <mat-form-field class="mat-input-outline mat-input-normalbg" appearance="outline">
+                        <textarea matInput rows="6"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="container" fxLayoutGap="0" fxLayoutGap="20px">
+                    <div fxFlex="100%" class="form-group">
+                        <label for="paysAdresse">Specifications</label>
+                        <div class="container" fxLayoutAlign="center" fxLayoutGap="10">
+                            <div fxFlex="10%" class="m-t-10">
+                                <span class="non-highlight-tab-text">1</span>
+                            </div>
+                            <div fxFlex="90%">
+                                <mat-form-field class="mat-input-outline mat-input-normalbg  width-100" appearance="outline">
+                                    <input matInput id="paysAdresse">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </mat-card>
+    </div>
+    <div fxFlex="40%">
+        <mat-card class="width-100 custom-bg-color" [ngClass]="{'p-0': index == 1}">
+            <h2>Create New Product</h2>
+            <form>
+
+            </form>
+        </mat-card>
+    </div>
+</div>

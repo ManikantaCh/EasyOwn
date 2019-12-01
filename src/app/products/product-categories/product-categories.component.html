@@ -1,0 +1,52 @@
+<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+    <div fxFlex="30%" class="custom-lite-bg-color">
+        <div class="row container m-t-25">
+            <div fxFlex="60%">
+                <p>Categories</p>
+            </div>
+            <div fxFlex="40%">
+                <button mat-raised-button color="primary" class="mat-button-custom btn-custom-bg m-l-50 m-t-10"
+                    (click)="createCategory()">+Create</button>
+            </div>
+        </div>
+        <mat-form-field class="mat-input-element-custom customGridColumn m-t-10 width-85">
+            <input matInput type="text" placeholder="Search Categories...">
+            <button mat-button matPrefix mat-icon-button>
+                <mat-icon>search</mat-icon>
+            </button>
+        </mat-form-field>
+        <mat-action-list>
+            <button [ngClass]="{'tab-active': index == i}" *ngFor="let category of categories;let i=index;"
+                mat-list-item (click)="index = i">
+                <div class="width-75" *ngIf="!category.isCreate">{{category.title}}</div>
+                <div class="m-l-25" *ngIf="!category.isCreate"
+                    [ngClass]="{'non-highlight-tab-text': index !== i, 'highlight-tab-text': index == i}">
+                    {{category.count}}</div>
+                <mat-form-field class="mat-input-element-custom customGridColumn width-100 m-t-25" *ngIf="category.isCreate" appearance="outline">
+                    <input matInput type="text" placeholder="Write new category">
+                </mat-form-field>
+            </button>
+        </mat-action-list>
+        <!-- </mat-card> -->
+    </div>
+    <div fxFlex="70%" class="m-l-n-10">
+        <div fxLayout="container wrap" fxLayout.md="row wrap" fxLayout.xs="column wrap" class="m-t-25 m-l-p-10"
+            fxLayoutGap="2% grid">
+            <div fxFlex.gt-xs="30%" fxFlex.gt-md="30%" *ngFor="let fruit of result; let i = index" fxLayoutGap="10px">
+                <mat-card class="width-85 category-result center-pos">
+                    <img src="../assets/81bjpVu5s5L._SL1500_.jpg" width="70px" height="100px">
+                    <mat-list>
+                        <mat-list-item>Samsung M30</mat-list-item>
+                        <mat-list-item>
+                            <p><small style="text-decoration: line-through;">&#x20b9;
+                                    30,000/-
+                                </small></p>
+                        </mat-list-item>
+                        <mat-list-item><strong>&#x20b9; 24,000/-</strong>
+                        </mat-list-item>
+                    </mat-list>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap.xs="0">
+    <div fxFlex="15%" *ngIf="!isSmallScreen" [ngClass]="{ 'custom-bg-color': index == 0, 'custom-lite-bg-color': index == 1}">
+        <mat-card [ngClass]="{ 'custom-bg-color': index == 0, 'custom-lite-bg-color': index == 1}">
+            <mat-sidenav mode="side" opened class="tab-align nav">
+                <mat-action-list>
+                    <button [ngClass]="{'tab-active': index == 0}" class="m-l-30" mat-list-item (click)="index = 0">
+                        <span>All Products</span> </button>
+                    <button [ngClass]="{'tab-active': index == 1}" class="m-l-30" mat-list-item (click)="index = 1">
+                        <span>Categories</span> </button>
+                </mat-action-list>
+            </mat-sidenav>
+        </mat-card>
+    </div>
+    <div fxFlex="15%" *ngIf="isSmallScreen">
+        <mat-card class="custom-bg-color">
+            <mat-tab-group (selectedTabChange)="tabChange($event)">
+                <mat-tab label="All Products" (click)="index = 0"></mat-tab>
+                <mat-tab label="Categories" (click)="index = 1"></mat-tab>
+            </mat-tab-group>
+        </mat-card>
+    </div>
+    <div fxFlex="85%">
+        <mat-card class="width-100 custom-bg-color" [ngClass]="{'p-0': index == 1}">
+            <mat-tab-group [(selectedIndex)]="index" class="header-less-tabs" animationDuration="0ms">
+                <mat-tab class="m-t-10">
+                    <all-products></all-products>
+                </mat-tab>
+                <mat-tab>
+                    <product-categories></product-categories>
+                </mat-tab>
+            </mat-tab-group>
+        </mat-card>
+    </div>
+</div>
